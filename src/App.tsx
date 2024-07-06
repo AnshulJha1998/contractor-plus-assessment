@@ -6,13 +6,14 @@ import "./App.css";
 import GroupedTasks from "./components/grouped-tasks/GroupedTasks";
 
 export default function App() {
-  const { register, handleSubmit, formState, control } = useForm<FORM_VALUES>({
-    defaultValues: {
-      title: "",
-      expireyDate: Date.now(),
-      groups: [],
-    },
-  });
+  const { register, handleSubmit, formState, control, watch } =
+    useForm<FORM_VALUES>({
+      defaultValues: {
+        title: "",
+        expireyDate: Date.now(),
+        groups: [],
+      },
+    });
 
   const { errors } = formState;
 
@@ -36,9 +37,9 @@ export default function App() {
             {
               materialId: uuidv4(),
               name: "",
-              rate: "",
-              quantity: "",
-              total: "",
+              rate: null,
+              quantity: null,
+              total: 0,
             },
           ],
         },
@@ -105,11 +106,15 @@ export default function App() {
                 control={control}
                 register={register}
                 groupIndex={groupIndex}
+                errors={errors}
+                watch={watch}
               />
             </div>
           ))}
         </div>
-        <button type="submit">GO!</button>
+        <button className="submit-btn" type="submit">
+          Submit
+        </button>
       </form>
     </main>
   );

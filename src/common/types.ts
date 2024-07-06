@@ -1,4 +1,9 @@
-import { Control, UseFormRegister } from "react-hook-form";
+import {
+  Control,
+  FieldErrors,
+  UseFormRegister,
+  UseFormWatch,
+} from "react-hook-form";
 
 export type FORM_VALUES = {
   title: string;
@@ -21,20 +26,24 @@ export type TASK = {
 export type MATERIAL = {
   materialId: string;
   name: string;
-  rate: string;
-  quantity: string;
-  total: string;
+  rate: number | null;
+  quantity: number | null;
+  total: number;
 };
 
-export type GROUPED_TASKS = {
+export type GROUPED_TASKS_PROPS = {
   control: Control<FORM_VALUES, unknown>;
   register: UseFormRegister<FORM_VALUES>;
   groupIndex: number;
+  errors: FieldErrors<FORM_VALUES>;
+  watch: UseFormWatch<FORM_VALUES>;
 };
 
-export type MaterialProps = {
+export type MATERIAL_PROPS = {
   control: Control<FORM_VALUES, unknown>;
   register: UseFormRegister<FORM_VALUES>;
   groupIndex: number;
   taskIndex: number;
+  errors: FieldErrors<FORM_VALUES>;
+  watch: UseFormWatch<FORM_VALUES>;
 };

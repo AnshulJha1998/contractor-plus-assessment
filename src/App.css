@@ -74,8 +74,6 @@ h1,h2,h3,h4,h5,h6{
 .task-inputs textarea{
   max-width: 100%;
   resize: horizontal;
-  margin-left: 1rem;
-  padding: 5px;
 }
 
 .material-fields{
@@ -87,4 +85,11 @@ h1,h2,h3,h4,h5,h6{
 
 .material-container{
   background-color: rgb(68, 67, 67);
+}
+
+.submit-btn{
+float: right;
+}
+.task-desc{
+  margin-left: 1rem;
 }
