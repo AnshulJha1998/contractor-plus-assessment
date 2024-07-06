@@ -1,0 +1,90 @@
+main{
+  display: flex;
+    justify-content: center;
+    align-items: center;
+margin-block: 10rem;
+}
+
+form{
+
+  max-width: 80rem;
+  min-width: 80rem;
+
+}
+
+.label-input{
+  display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+}
+
+input{
+  width: 9rem;
+    padding: 5px;
+   
+}
+
+p{
+  color: red;
+  margin: 0;
+}
+
+h1,h2,h3,h4,h5,h6{
+  margin: 0;
+}
+
+.groups{
+  display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    
+}
+
+.group{
+  background-color: black;
+}
+
+
+.name-remove{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.border-padding{
+  border: 1px solid white;
+    padding: 1rem;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.tasks-material-contianer{
+  margin-bottom: 1rem;
+  background-color: #242424;
+}
+
+.task-inputs{
+  margin-bottom: 1rem;
+  display: flex;
+}
+
+.task-inputs textarea{
+  max-width: 100%;
+  resize: horizontal;
+  margin-left: 1rem;
+  padding: 5px;
+}
+
+.material-fields{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.material-container{
+  background-color: rgb(68, 67, 67);
+}
